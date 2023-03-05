@@ -4,12 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>前端项目合集</title>
-    <link rel="stylesheet" href="index/CSS.css">
+    <title>Godxu</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none !important;
+            -moz-user-select: none !important;
+            -ms-user-select: none !important;
+            user-select: none !important;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            background-color: #0f1423;
+            min-height: 800px;
+        }
+
+        .borderBox {
+            background-color: rgb(83, 124, 110);
+            width: 400px;
+            padding: 50px;
+            margin: auto;
+            text-align: center;
+            border-radius: 1rem;
+        }
+
+        .borderBox ul {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .borderBox ul li {  
+            list-style: none;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        .borderBox ul li a {
+            display: inline-block;
+            text-decoration: none;
+            font-size: 24px;
+            font-weight: lighter;
+            width: 100%;
+            border-radius: 8px; 
+            padding: 10px;    
+            background-color: whitesmoke;
+            color: #ff0000;
+            transition: 0.5s;
+        }
+
+        .borderBox ul li a::after {
+            content: '»';
+            position: relative;
+            opacity: 0;
+            right: -5px;
+            transition: 0.5s;
+        }
+
+        .borderBox ul li:hover a {
+            padding-right: 25px;
+        }
+
+        .borderBox ul li:hover a::after {
+            opacity: 1;
+            right: -10px;
+        }
+    </style>
 </head>
 <body>
-    <br><br><br>
-    <div class="box">
+    <div class="borderBox">
         <ul>
             <li>
                 <a href="./20230304/index.html">登录页面示例</a>
