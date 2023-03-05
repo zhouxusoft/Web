@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/提拉米苏.png" type="icon" />
+    <title>godxu</title>
+    <link rel="stylesheet" href="CSS.css">
+</head>
+
+<body>
+    <div class="bor">
+        <div class="top">
+            <span class="text1">ZhouXuSoft</span>
+            <a href="https://godxu.top">主页</a>
+            <a href="http://godxu.top/game/" class="active">游戏</a>
+            <a href="https://godxu.top/about/">关于</a>
+        </div>
+        <div class="main">
+            <div class="mainin">
+                <div class="text2">盘灵古域</div>
+                <div class="text3">诸天仙魔 予我神力</div>
+            </div>
+        </div>
+        <div class="mid">
+            <div class="mygame">
+                <img class="fengmian" src="../img/plgy.png" alt="">
+                <div class="text5">盘灵古域1.2</div>
+                <div class="text6">2022-5-7</div>
+                <img class="win" src="../img/windows.png" alt="" width="28px">
+            </div>
+            <br>
+            <a data-url="http://web.app.ouyangpeng.top/pan/api/download.php?objectId=a6b3b0cd87895c5ea0857c472e73e726" class="download">
+                <div>立即下载</div>
+            </a>
+            <p class="size">518.44MB</p>
+            <div class="unreal">
+                <img src="../img/unreal-engine.png" alt="">
+            </div>
+        </div>
+        <div class="bottom">
+            <hr class="h">
+            <div class="bbox">
+                <a class="bef">
+                    <div class="wc">
+                        <div class="code">
+                            <img src="../img/wechatcode.jpg" alt="" width="140px">
+                        </div>
+                        <img src="../img/微信.png" alt="" class="icon1">
+                    </div>
+                </a>
+                <a class="bef">
+                    <div class="wc">
+                        <div class="code">
+                            <img src="../img/bilibilicode.jpg" alt="" width="140px">
+                        </div>
+                        <img src="../img/bilibili@2x.png" alt="" class="icon2">
+                    </div>
+                </a>
+                <a class="bef">
+                    <div class="wc">
+                        <div class="code">
+                            <img src="../img/qqcode3.png" alt="" width="140px">
+                        </div>
+                        <img src="../img/QQ-circle-fill.png" alt="" class="icon1">
+                    </div>
+                </a>
+                <a href="https://steamcommunity.com/id/zhouxusoft/" target="_blank">
+                    <img src="../img/steam.png" alt="" class="icon3">
+                </a>
+                <a href="">
+                    <img src="../img/epicgames.png" alt="" class="icon4">
+                </a>
+            </div>
+            <hr class="h">
+            <p class="pb">
+                <img src="../img/ZX.png" alt="" width="12px">
+                未完待旭游戏工作室
+            </p class="pb">
+            <p class="pb">我们是制造快乐的一群人 | 客服电话:15579305031(工作日9:00-18:00)</p>
+            <p class="pb">Copyright &copy zhouxusoft 2021-2022</p>
+            <p class="pb">转载内容版权归作者及来源网站所有</p>
+            <p class="pb">健康游戏忠告：抵制不良游戏 拒绝盗版游戏 注意自我保护 谨防受骗上当</p>
+            <p class="pb">适度游戏益脑 沉迷游戏伤身 合理安排时间 享受健康生活</p>
+        </div>
+    </div>
+    <div style="display: none;" id="iframe_box">        
+    </div>
+    <script>
+        var eles = document.querySelectorAll('.download')
+        var iframe_box = document.querySelector('#iframe_box')
+        eles.forEach(ele => {
+            ele.addEventListener('click', function () {
+                var url = this.getAttribute('data-url')
+                iframe_box.innerHTML = iframe_box.innerHTML + '<iframe src="' + url + '"><iframe>'
+            })
+        })
+    </script>
+</body>
+
+</html>
