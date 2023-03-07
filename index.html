@@ -77,7 +77,7 @@
         }
 
         .bottom {
-            position:absolute;
+            position: absolute;
             bottom: 10px;
             text-align: center;
         }
@@ -97,17 +97,34 @@
             font-size: 16px;
             color: silver;
             padding: 5px;
-            text-decoration:underline;
+            text-decoration: underline;
         }
 
-        .about {
+        .about .icon {
             display: inline-block;
             width: 40px;
             height: 40px;
             margin: 5px;
+            margin-bottom: 10px;
             background-color: silver;
             border-radius: 50%;
         }
+
+        .bottom .about {
+            display: inline-block;
+        }
+
+        .bottom .about .icon {
+            background-color: silver;
+            border-radius: 50%;
+        }
+
+        .bottom .about .code {
+            border-radius: 10px;
+            background-color: white;
+            padding: 5px;
+        }
+
     </style>
 </head>
 
@@ -127,19 +144,28 @@
     </div>
     <div class="bottom">
         <div class="about">
-            <img src="game/img/微信.png" alt="" width="40px">
+            <div class="code">
+                <img src="game/img/wechatcode.jpg" alt="" width="120px">
+            </div>
+            <img src="game/img/微信.png" alt="" width="40px" class="icon">
         </div>
         <div class="about">
-            <img src="game/img/QQ-circle-fill.png" alt="" width="40px">
+            <div class="code">
+                <img src="game/img/qqcode3.png" alt="" width="120px">
+            </div>
+            <img src="game/img/QQ-circle-fill.png" alt="" width="40px" class="icon">
         </div>
+
         <div class="beiAn">
             备案号:<a href="https://beian.miit.gov.cn/" class="text-dark" target="_blank">赣ICP备2022008998号-1</a>
         </div>
         <div class="beiAn">
-            <a  href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36010802000709">
-                <img referrerPolicy="no-referrer" src="https://p.ananas.chaoxing.com/star3/origin/6688ed27e29b4feef62cc2518e2e4de3.png" width = "16px" " alt="公安备案">
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=36010802000709">
+                <img referrerPolicy="no-referrer"
+                    src="https://p.ananas.chaoxing.com/star3/origin/6688ed27e29b4feef62cc2518e2e4de3.png"
+                    width="16px" " alt=" 公安备案">
                 赣公网安备 36010802000709号&nbsp;
-        </a>
+            </a>
         </div>
     </div>
 </body>
