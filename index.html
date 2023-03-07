@@ -104,27 +104,49 @@
             display: inline-block;
             width: 40px;
             height: 40px;
-            margin: 5px;
-            margin-bottom: 10px;
+            margin: 10px;
             background-color: silver;
             border-radius: 50%;
         }
 
         .bottom .about {
             display: inline-block;
+            border-radius: 10px;
+            transition: 0.3s;
+            margin-bottom: 10px;
         }
 
         .bottom .about .icon {
+            margin: 0 10px;
             background-color: silver;
             border-radius: 50%;
+            transition: 0.3s;
         }
 
         .bottom .about .code {
             border-radius: 10px;
-            background-color: white;
-            padding: 5px;
+            padding-top: 5px;
+            transition: 0.3s;
         }
 
+        .bottom .about:hover {
+            background-color: white;
+            box-shadow: 0 0 8px rgb(0, 255, 0);
+        }
+
+        .bottom .about .code img {
+            width: 0px;
+            transition: 0.3s;
+        }
+
+        .bottom .about:hover .code img {
+            width: 100px;
+        }
+
+        .bottom .about:hover .icon {
+            background-color: bisque;
+            margin: 0 35px;
+        }
     </style>
 </head>
 
@@ -145,13 +167,13 @@
     <div class="bottom">
         <div class="about">
             <div class="code">
-                <img src="game/img/wechatcode.jpg" alt="" width="120px">
+                <img src="game/img/wechatcode.jpg" alt="">
             </div>
             <img src="game/img/微信.png" alt="" width="40px" class="icon">
         </div>
         <div class="about">
             <div class="code">
-                <img src="game/img/qqcode3.png" alt="" width="120px">
+                <img src="game/img/qqcode3.png" alt="">
             </div>
             <img src="game/img/QQ-circle-fill.png" alt="" width="40px" class="icon">
         </div>
