@@ -64,7 +64,7 @@ exports.login = (req, res) => {
         if (!compareResult) {
             return res.cc('密码错误')
         }
-        const uer = {...results[0], password: '', user_pic: ''}
+        const user = {...results[0], password: '', user_pic: ''}
         //对用户信息进行加密，生成一个token
         const tokenStr = jwt.sign(user, config.jwtSecretKey, {
             expiresIn: '10h'
