@@ -64,3 +64,8 @@
     display: flex;
     justify-content: end;
 }
+
+.delbookinfo {
+    font-size: 17px;
+    color: #464d5b;
+}

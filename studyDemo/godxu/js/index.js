@@ -47,6 +47,13 @@ const editbookauthor = document.getElementsByClassName("editbookauthor")[0]
 const editbookpublisher = document.getElementsByClassName("editbookpublisher")[0]
 const editbook = document.getElementsByClassName("editbook")[0]
 const editbookcancle = document.getElementsByClassName("editbookcancle")[0]
+const yesdelbookmodalbtn = document.getElementsByClassName("yesdelbookmodalbtn")[0]
+const delbookid = document.getElementsByClassName("delbookid")[0]
+const delbookname = document.getElementsByClassName("delbookname")[0]
+const delbookauthor = document.getElementsByClassName("delbookauthor")[0]
+const delbookpublisher = document.getElementsByClassName("delbookpublisher")[0]
+const yesdelbook = document.getElementsByClassName("yesdelbook")[0]
+const delbookcancle = document.getElementsByClassName("delbookcancle")[0]
 
 let booklistinfo = []
 let currentBookId = 0
@@ -110,8 +117,11 @@ function resetBookList() {
         delbtns[i].addEventListener("click", () => {
             // console.log(delbtns[i].dataset.id)
             currentBookId = delbtns[i].dataset.id
-            delBook()
-            
+            yesdelbookmodalbtn.click()
+            delbookid.innerHTML = "序号：" + booklistinfo[i].id
+            delbookname.innerHTML = "书名：" + booklistinfo[i].bookname
+            delbookauthor.innerHTML = "作者：" + booklistinfo[i].author
+            delbookpublisher.innerHTML = "出版社：" + booklistinfo[i].publisher
         })
     }
 }
@@ -154,7 +164,7 @@ editbook.addEventListener("click", () => {
 /**
  * 点击确认删除图书
  */
-function delBook() {
+yesdelbook.addEventListener("click", () => {
     const params = new URLSearchParams()
     params.set("bookid", currentBookId)
     fetch(`https://hmajax.itheima.net/api/books/${currentBookId}`, {
@@ -169,4 +179,5 @@ function delBook() {
         }
         getBookList()
     })
-}
+    delbookcancle.click()
+})

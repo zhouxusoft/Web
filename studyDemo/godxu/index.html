@@ -249,7 +249,40 @@
 
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary editbookcancle" data-bs-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary editbook">修改</button>
+                    <button type="button" class="btn btn-success editbook">修改</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <button class="d-none yesdelbookmodalbtn" data-bs-toggle="modal" data-bs-target="#delBookModal">编辑图书</button>
+    <div class="modal fade" id="delBookModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">确认删除</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body delbookinfo">
+                    <div class="delbookid">
+
+                    </div>
+                    <div class="delbookname">
+
+                    </div>
+                    <div class="delbookauthor">
+
+                    </div>
+                    <div class="delbookpublisher">
+
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary delbookcancle" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-danger yesdelbook">删除</button>
                 </div>
 
             </div>
