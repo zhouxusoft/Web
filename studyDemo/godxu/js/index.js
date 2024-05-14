@@ -5,6 +5,9 @@ const addbookpublisher = document.getElementsByClassName("addbookpublisher")[0]
 const addbook = document.getElementsByClassName("addbook")[0]
 const addbookcancle = document.getElementsByClassName("addbookcancle")[0]
 
+/**
+ * 点击添加图书
+ */
 addbook.addEventListener("click", () => {
     let bookinfo = {
         bookname: addbookname.value,
@@ -48,6 +51,9 @@ const editbookcancle = document.getElementsByClassName("editbookcancle")[0]
 let booklistinfo = []
 let currentBookId = 0
 
+/**
+ * 向后端请求图书列表
+ */
 function getBookList() {
     fetch("https://hmajax.itheima.net/api/books?creator=godxu", {
         method: 'GET',
@@ -66,6 +72,9 @@ function getBookList() {
 }
 getBookList()
 
+/**
+ * 刷新图书列表
+ */
 function resetBookList() {
     booklist.innerHTML = ''
     for (let i = 0; i < booklistinfo.length; i++) {
@@ -101,6 +110,8 @@ function resetBookList() {
         delbtns[i].addEventListener("click", () => {
             // console.log(delbtns[i].dataset.id)
             currentBookId = delbtns[i].dataset.id
+            delBook()
+            
         })
     }
 }
@@ -137,5 +148,25 @@ editbook.addEventListener("click", () => {
         })
         editbookcancle.click()
     }
-    console.log(bookinfo)
+    // console.log(bookinfo)
 })
+
+/**
+ * 点击确认删除图书
+ */
+function delBook() {
+    const params = new URLSearchParams()
+    params.set("bookid", currentBookId)
+    fetch(`https://hmajax.itheima.net/api/books/${currentBookId}`, {
+        method: 'DELETE',
+        body: params
+    }).then(response => response.json()).then(data => {
+        console.log(data)
+        if (data.message == "删除图书成功") {
+            alert("删除图书成功")
+        } else {
+            alert(data.message)
+        }
+        getBookList()
+    })
+}
