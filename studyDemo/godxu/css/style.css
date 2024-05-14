@@ -69,3 +69,20 @@
     font-size: 17px;
     color: #464d5b;
 }
+
+footer {
+    margin-top: 100px;
+    background-color: #21242c;
+    text-align: center;
+    padding: 40px 0 30px;
+    color: #5d5d5e;
+    font-size: 14px;
+}
+
+footer .container {
+    display: block;
+}
+
+footer a {
+    color: #5d5d5e;
+}
