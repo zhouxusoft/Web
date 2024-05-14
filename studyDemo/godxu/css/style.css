@@ -1,0 +1,66 @@
+.topborder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.toprightborder {
+    display: flex;
+    justify-content: space-between;
+}
+
+.citylogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.city {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.bookctrl {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.tabletr {
+    background-color: #2692ff;
+    color: #ffffff;
+}
+
+.delbtn {
+    color: #FFA500;
+    background-color: #ffffff;
+    border: none;
+}
+
+.editbtn {
+    color: #2692ff;
+    background-color: #ffffff;
+    border: none;
+}
+
+.classitembottominfo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #98a3b7;
+}
+
+.classitemimg {
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.classitembottominfonum {
+    display: flex;
+    justify-content: end;
+}

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>黑马图书管理系统</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.net/popper.js/2.9.3/umd/popper.min.js"></script>
+    <script src="https://cdn.staticfile.net/twitter-bootstrap/5.1.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topborder">
+            <div class="py-4">
+                <img src="./images/logo.png" alt="">
+            </div>
+            <div class="py-4 toprightborder">
+                <div class="px-2 citylogo">
+                    <img src="./images/city_m.png" alt="" srcset="">
+                </div>
+                <div class="city">
+                    全国城市
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+            <button type="button" data-bs-target="#demo" data-bs-slide-to="3"></button>
+        </div>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/banner1.jpg" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/banner2.jpg" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/banner3.jpg" class="d-block" style="width:100%">
+            </div>
+            <div class="carousel-item">
+                <img src="./images/banner4.jpg" class="d-block" style="width:100%">
+            </div>
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <div class="centerborder container">
+        <div class="bookctrl px-2 pt-5 pb-2">
+            <h4>图书管理</h4>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBookModal">+ 添加</button>
+        </div>
+
+        <div class="px-2">
+            <table class="table table-bordered">
+                <thead>
+                    <tr class="tabletr">
+                        <th class="col-lg-1 col-sm-1">序号</th>
+                        <th class="col-lg-3 col-sm-3">书名</th>
+                        <th class="col-lg-1 col-sm-2">作者</th>
+                        <th class="col-lg-5 col-sm-3">出版社</th>
+                        <th class="col-lg-2 col-sm-3">操作</th>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider booklist">
+                </tbody>
+            </table>
+        </div>
+        <div class="p-2 pt-4">
+            <h4>学习路线图</h4>
+        </div>
+        <div class="classlist row">
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/Harmony.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        鸿蒙开发轻松学
+                    </div>
+                    <div class="classitembottominfonum">
+                        4196人已学
+                    </div>
+                </div>
+            </div>
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/java.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        0基础快速入门
+                    </div>
+                    <div class="classitembottominfonum">
+                        9296人已学
+                    </div>
+                </div>
+            </div>
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/web.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        快速进阶
+                    </div>
+                    <div class="classitembottominfonum">
+                        41926人已学
+                    </div>
+                </div>
+            </div>
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/python.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        Python基础
+                    </div>
+                    <div class="classitembottominfonum">
+                        41926人已学
+                    </div>
+                </div>
+            </div>
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/ai.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        人工智能
+                    </div>
+                    <div class="classitembottominfonum">
+                        1196人已学
+                    </div>
+                </div>
+            </div>
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/c.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        C语言
+                    </div>
+                    <div class="classitembottominfonum">
+                        1176人已学
+                    </div>
+                </div>
+            </div>
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/ui.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        UI设计
+                    </div>
+                    <div class="classitembottominfonum">
+                        4196人已学
+                    </div>
+                </div>
+            </div>
+            <div class="classitem col-lg-3 col-sm-6">
+                <div class="">
+                    <img src="./images/media.png" alt="" class="img-fluid classitemimg">
+                </div>
+                <div class="classitembottominfo mt-2 mb-4">
+                    <div class="classitembottominfoname">
+                        新媒体
+                    </div>
+                    <div class="classitembottominfonum">
+                        4196人已学
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="addBookModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">添加图书</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">书名</label>
+                        <input type="text" class="form-control addbookname" placeholder="请输入书籍名称">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">作者</label>
+                        <input type="text" class="form-control addbookauthor" placeholder="请输入作者名称">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">出版社</label>
+                        <input type="text" class="form-control addbookpublisher" placeholder="请输入出版社名称">
+                      </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary addbookcancle" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary addbook">添加</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <button class="d-none editbookmodalbtn" data-bs-toggle="modal" data-bs-target="#editBookModal">编辑图书</button>
+    <div class="modal fade" id="editBookModal">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">编辑图书</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">书名</label>
+                        <input type="text" class="form-control editbookname" placeholder="">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">作者</label>
+                        <input type="text" class="form-control editbookauthor" placeholder="">
+                      </div>
+                      <div class="form-group mb-3">
+                        <label for="exampleInputEmail1">出版社</label>
+                        <input type="text" class="form-control editbookpublisher" placeholder="">
+                      </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary editbookcancle" data-bs-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary editbook">修改</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
