@@ -1,7 +1,6 @@
 const addbookname = document.getElementsByClassName("addbookname")[0]
 const addbookauthor = document.getElementsByClassName("addbookauthor")[0]
 const addbookpublisher = document.getElementsByClassName("addbookpublisher")[0]
-
 const addbook = document.getElementsByClassName("addbook")[0]
 const addbookcancle = document.getElementsByClassName("addbookcancle")[0]
 
