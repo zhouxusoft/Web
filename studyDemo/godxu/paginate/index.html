@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paginate</title>
+    <style>
+        h1 {
+            border: 1px solid black;
+            margin: 20px 100px;
+            height: 260px;
+            border-radius: 0.25rem;
+        }
+        .borderbox {
+            /* border: 1px solid black; */
+            height: 52px;
+            margin: 0 100px;
+            border-radius: 0.25rem;
+        }
+        
+        .paginatebox {
+            height: 52px;
+            display: flex;
+            justify-content: space-between;
+            width: fit-content;
+            margin: 0 auto;
+        }
+
+        .prevpage {
+            width: 80px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .prevpagebtn {
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
+            height: 32px;
+            width: 60px;
+            cursor: pointer;
+        }
+
+        .nextpage {
+            width: 80px;
+            height: 52px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nextpagebtn {
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
+            height: 32px;
+            width: 60px;
+            cursor: pointer;
+        }
+
+        .pageitembox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .pageitembtn {
+            background-color: #FFFFFF;
+            border: 1px solid #000000;
+            height: 32px;
+            width: 32px;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .ellipsisbtn {
+            background-color: #FFFFFF;
+            border: none;
+            height: 32px;
+            width: 32px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Page: 1</h1>
+    </div>
+    <div class="borderbox">
+        <div class="paginatebox">
+            <div class="prevpage">
+                <button class="prevpagebtn">上一页</button>
+            </div>
+            <div class="pageitembox">
+                <button class="pageitembtn">1</button>
+                <button class="ellipsisbtn">···</button>
+                <button class="pageitembtn">3</button>
+                <button class="pageitembtn">4</button>
+                <button class="pageitembtn">5</button>
+                <button class="pageitembtn">6</button>
+                <button class="pageitembtn">7</button>
+                <button class="ellipsisbtn">···</button>
+                <button class="pageitembtn">9</button>
+            </div>
+            <div class="nextpage">
+                <button class="nextpagebtn">下一页</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 定义分页组件显示的最大页面按钮数量
+        const MAXPAGEITEMNUM = 9
+        // 初始化当前所在页数
+        let currentpage = 1
+        // 初始化总页数
+        let totlepage = 20
+    </script>
+</body>
+</html>
