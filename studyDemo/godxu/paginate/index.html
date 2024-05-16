@@ -1,29 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Paginate</title>
     <style>
-        h1 {
+        .showbox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border: 1px solid black;
             margin: 20px 100px;
-            height: 260px;
             border-radius: 0.25rem;
+            height: 260px;
         }
-        .borderbox {
-            /* border: 1px solid black; */
+
+        .paginateborderbox {
             height: 52px;
             margin: 0 100px;
             border-radius: 0.25rem;
         }
-        
+
         .paginatebox {
             height: 52px;
             display: flex;
             justify-content: space-between;
             width: fit-content;
             margin: 0 auto;
+        }
+
+        .paginatebtn {
+            transition: 0.1s;
+        }
+
+        .paginatebtn:hover {
+            background-color: #D0D7DE66;
         }
 
         .prevpage {
@@ -36,10 +48,11 @@
 
         .prevpagebtn {
             background-color: #FFFFFF;
-            border: 1px solid #000000;
+            border: 1px solid #999999;
             height: 32px;
             width: 60px;
             cursor: pointer;
+            border-radius: 0.25rem;
         }
 
         .nextpage {
@@ -52,10 +65,11 @@
 
         .nextpagebtn {
             background-color: #FFFFFF;
-            border: 1px solid #000000;
+            border: 1px solid #999999;
             height: 32px;
             width: 60px;
             cursor: pointer;
+            border-radius: 0.25rem;
         }
 
         .pageitembox {
@@ -66,11 +80,13 @@
 
         .pageitembtn {
             background-color: #FFFFFF;
-            border: 1px solid #000000;
+            border: 1px solid #AAAAAA;
             height: 32px;
             width: 32px;
             margin: 0 5px;
             cursor: pointer;
+            color: #1F2328;
+            border-radius: 0.25rem;
         }
 
         .ellipsisbtn {
@@ -78,42 +94,195 @@
             border: none;
             height: 32px;
             width: 32px;
+            font-weight: 600;
+        }
+
+        .pagebtndisabled {
+            border: 1px solid #BBBBBB !important;
+        }
+
+        .pageitembtnactive {
+            background-color: #0969DA;
+            color: #FFFFFF;
+            height: 32px;
+            width: 32px;
+            margin: 0 5px;
+            border: none;
+            font-size: 14px;
+            border-radius: 0.25rem;
         }
     </style>
 </head>
+
 <body>
-    <div>
-        <h1>Page: 1</h1>
+    <div class="showbox">
+        <h1 class="currentpageshow">currentPage: 1</h1>
     </div>
-    <div class="borderbox">
+    <div class="paginateborderbox">
         <div class="paginatebox">
             <div class="prevpage">
-                <button class="prevpagebtn">上一页</button>
+                <button class="prevpagebtn paginatebtn pagebtndisabled">上一页</button>
             </div>
             <div class="pageitembox">
-                <button class="pageitembtn">1</button>
+                <button class="pageitembtn paginatebtn">1</button>
                 <button class="ellipsisbtn">···</button>
-                <button class="pageitembtn">3</button>
-                <button class="pageitembtn">4</button>
-                <button class="pageitembtn">5</button>
-                <button class="pageitembtn">6</button>
-                <button class="pageitembtn">7</button>
+                <button class="pageitembtn paginatebtn">3</button>
+                <button class="pageitembtn paginatebtn">4</button>
+                <button class="pageitembtnactive">5</button>
+                <button class="pageitembtn paginatebtn">6</button>
+                <button class="pageitembtn paginatebtn">7</button>
                 <button class="ellipsisbtn">···</button>
-                <button class="pageitembtn">9</button>
+                <button class="pageitembtn paginatebtn">9</button>
             </div>
             <div class="nextpage">
-                <button class="nextpagebtn">下一页</button>
+                <button class="nextpagebtn paginatebtn">下一页</button>
             </div>
         </div>
     </div>
-    
+
     <script>
-        // 定义分页组件显示的最大页面按钮数量
+        const currentpageshow = document.getElementsByClassName("currentpageshow")[0]
+
+        // 定义分页组件显示的最大页面按钮数量，建议为7、9、11、13等
         const MAXPAGEITEMNUM = 9
         // 初始化当前所在页数
         let currentpage = 1
         // 初始化总页数
         let totlepage = 20
+
+        /**
+         * 改变 currentpage 时，页面产生的变化
+         */
+        function changeCurrentPageShow() {
+            currentpageshow.innerHTML = 'currentPage: ' + currentpage
+        }
+
+        const prevpagebtn = document.getElementsByClassName("prevpagebtn")[0]
+        const nextpagebtn = document.getElementsByClassName("nextpagebtn")[0]
+        const pageitembox = document.getElementsByClassName("pageitembox")[0]
+
+        /**
+         * 将任意字符串转换为整数，无法转换返回 1
+         */
+         function toInt(num) {
+            if (Number.isInteger(num)) {
+                return num
+            } else {
+                num = Math.floor(num)
+                if (Number.isNaN(num)) {
+                    return 1
+                } else {
+                    return num
+                }
+            }
+        }
+        /**
+         * 换页或者获取 currentpage 时调用，用于判断当前所在页数是否正确
+         */
+        function currentpageOK() {
+            if (!Number.isInteger(currentpage)) {
+                currentpage = 1
+            }
+            if (currentpage < 1) {
+                currentpage = 1
+            }
+            if (currentpage > totlepage) {
+                currentpage = totlepage
+            }
+            if (currentpage == 1) {
+                prevpagebtn.disabled = true
+                prevpagebtn.classList.add("pagebtndisabled")
+            } else {
+                prevpagebtn.disabled = false
+                prevpagebtn.classList.remove("pagebtndisabled")
+            }
+            if (currentpage == totlepage) {
+                nextpagebtn.disabled = true
+                nextpagebtn.classList.add("pagebtndisabled")
+            } else {
+                nextpagebtn.disabled = false
+                nextpagebtn.classList.remove("pagebtndisabled")
+            }
+        }
+
+        /**
+         * 切换页面时调用，用于重新绘制分页组件的按钮显示
+         */
+        function resetPaginate() {
+            currentpageOK()
+            changeCurrentPageShow()
+            if (totlepage <= MAXPAGEITEMNUM) {
+                pageitembox.innerHTML = ''
+                for (let i = 1; i <= totlepage; i++) {
+                    if (i == currentpage) {
+                        pageitembox.innerHTML += `<button class="pageitembtnactive">${i}</button>`
+                    } else {
+                        pageitembox.innerHTML += `<button class="pageitembtn paginatebtn" data-page="${i}">${i}</button>`
+                    }
+                }
+            } else {
+                if (currentpage <= Math.ceil(MAXPAGEITEMNUM / 2)) {
+                    pageitembox.innerHTML = ''
+                    for (let i = 1; i < MAXPAGEITEMNUM - 1; i++) {
+                        if (i == currentpage) {
+                            pageitembox.innerHTML += `<button class="pageitembtnactive">${i}</button>`
+                        } else {
+                            pageitembox.innerHTML += `<button class="pageitembtn paginatebtn" data-page="${i}">${i}</button>`
+                        }
+                    }
+                    pageitembox.innerHTML += `<button class="ellipsisbtn">···</button>
+                                            <button class="pageitembtn paginatebtn" data-page="${totlepage}">${totlepage}</button>`
+
+                } else if ((totlepage - currentpage) < Math.ceil(MAXPAGEITEMNUM / 2)) {
+                    pageitembox.innerHTML = `<button class="pageitembtn paginatebtn" data-page="1">1</button>
+                                            <button class="ellipsisbtn">···</button>`
+                    for (let i = 0; i < MAXPAGEITEMNUM - 2; i++) {
+                        let pagenum = totlepage - MAXPAGEITEMNUM + 3 + i
+                        if (pagenum == currentpage) {
+                            pageitembox.innerHTML += `<button class="pageitembtnactive">${pagenum}</button>`
+                        } else {
+                            pageitembox.innerHTML += `<button class="pageitembtn paginatebtn" data-page="${pagenum}">${pagenum}</button>`
+                        }
+                    }
+                } else {
+                    pageitembox.innerHTML = `<button class="pageitembtn paginatebtn" data-page="1">1</button>
+                                            <button class="ellipsisbtn">···</button>`
+                    for (let i = 0; i < MAXPAGEITEMNUM - 4; i++) {
+                        let pagenum = currentpage - Math.floor(MAXPAGEITEMNUM / 2) + 2 + i
+                        if (pagenum == currentpage) {
+                            pageitembox.innerHTML += `<button class="pageitembtnactive">${pagenum}</button>`
+                        } else {
+                            pageitembox.innerHTML += `<button class="pageitembtn paginatebtn" data-page="${pagenum}">${pagenum}</button>`
+                        }
+                    }
+                    pageitembox.innerHTML += `<button class="ellipsisbtn">···</button>
+                                            <button class="pageitembtn paginatebtn" data-page="${totlepage}">${totlepage}</button>`
+                }
+            }
+            const pageitembtns = document.getElementsByClassName("pageitembtn")
+            for (let i = 0; i < pageitembtns.length; i++) {
+                const element = pageitembtns[i]
+                element.addEventListener('click', () => {
+                    currentpage = toInt(element.getAttribute('data-page'))
+                    console.log(currentpage)
+                    resetPaginate()
+                })
+            }
+        }
+        resetPaginate()
+
+        prevpagebtn.addEventListener('click', () => {
+            currentpageOK()
+            currentpage = currentpage - 1
+            resetPaginate()
+        })
+
+        nextpagebtn.addEventListener('click', () => {
+            currentpageOK()
+            currentpage = currentpage + 1
+            resetPaginate()
+        })
     </script>
 </body>
+
 </html>
