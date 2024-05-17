@@ -1,6 +1,6 @@
 
 const main = async ()=> {
-    const { Magazine } = await import('gede-book-api')
-    console.log(await Magazine.getIssues(805))
+    const { Book } = await import('gede-book-api')
+    console.log(await Book.getList(124))
 }
 main()
