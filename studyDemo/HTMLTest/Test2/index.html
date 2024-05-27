@@ -69,7 +69,8 @@
 </head>
 
 <body>
-    <div style="height: 100vh;"></div>
+    <div style="height: 100vh;">
+    </div>
     <div class="bottomboxborder">
         <div class="bottombox">
             <div id="gradient-background" style=" transition: 1s ease">
@@ -87,7 +88,7 @@
             let rect = bottombox.getBoundingClientRect()
             let windowHeight = window.innerHeight || document.documentElement.clientHeight
 
-            if (rect.top< windowHeight * 0.6 && rect.bottom > windowHeight * 0.3) {
+            if (rect.top< windowHeight * 0.5 && rect.bottom > windowHeight * 0.3) {
                 bottombox.classList.add('bottomboxhover')
             } else {
                 bottombox.classList.remove('bottomboxhover')
