@@ -1,0 +1,30 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 200%;
+    overflow-y: scroll;
+    font-family: Arial, sans-serif;
+}
+
+.content {
+    position: relative;
+    padding: 20px;
+}
+
+.spacer {
+    height: 100vh; /* Create space to enable scrolling */
+}
+
+.target {
+    position: relative;
+    left: -100%; /* Start off-screen */
+    transition: left 0.5s ease; /* Transition for sliding in and out */
+    padding: 20px;
+    background-color: lightblue;
+    border: 1px solid #000;
+    width: 200px;
+}
+
+.box {
+    height: 100vh !important;
+}
