@@ -1,13 +1,36 @@
 const bottombox = document.getElementsByClassName('bottombox')[0]
 
-document.addEventListener('scroll', function () {
-    let rect = bottombox.getBoundingClientRect()
+window.onload = () => {
+    let rectbottombox = bottombox.getBoundingClientRect()
     let windowHeight = window.innerHeight || document.documentElement.clientHeight
 
-    if (rect.top < windowHeight * 0.5 && rect.bottom > windowHeight * 0.3) {
+    if (rectbottombox.top < windowHeight * 0.5 && rectbottombox.bottom > windowHeight * 0.3) {
         bottombox.classList.add('bottomboxhover')
     } else {
         bottombox.classList.remove('bottomboxhover')
+    }
+
+    let rectrotatetextbox = rotatetextbox.getBoundingClientRect()
+
+    if (rectrotatetextbox.top < windowHeight) {
+        rotatetextbox.classList.add('runtextfadein')
+    }
+}
+
+document.addEventListener('scroll', function () {
+    let rectbottombox = bottombox.getBoundingClientRect()
+    let windowHeight = window.innerHeight || document.documentElement.clientHeight
+
+    if (rectbottombox.top < windowHeight * 0.5 && rectbottombox.bottom > windowHeight * 0.3) {
+        bottombox.classList.add('bottomboxhover')
+    } else {
+        bottombox.classList.remove('bottomboxhover')
+    }
+
+    let rectrotatetextbox = rotatetextbox.getBoundingClientRect()
+
+    if (rectrotatetextbox.top < windowHeight) {
+        rotatetextbox.classList.add('runtextfadein')
     }
 })
 

@@ -76,7 +76,7 @@ body {
     opacity: 0;
 }
 
-@keyframes fadein {
+@keyframes textfadein {
     0% {
         opacity: 0;
     }
@@ -90,8 +90,8 @@ body {
     }
 }
 
-.rotatetextbox:hover span {
+.runtextfadein span{
     transform: translateY(0%) rotate(0deg) translateZ(0) !important;
-    animation: fadein 1s;
+    animation: textfadein 1s;
     opacity: 1;
 }
