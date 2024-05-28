@@ -5,121 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>动态背景示例</title>
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            height: 300vh;
-        }
-
-        span {
-            color: #FFFFFF;
-        }
-
-        .bottomboxborder {
-            position: relative;
-            height: 100vh;
-            background-color: #222222;
-            background-image: url('./image.webp');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-
-        .bottombox {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 100%;
-            width: 100%;
-            padding: 100px;
-            background-image: url('./noise.png');
-            background-repeat: repeat;
-            background-color: #000000FF;
-            transition: 0.8s ease;
-        }
-
-        .bottomboxhover {
-            background-color: #00000000;
-            transition: 1.2s ease;
-        }
-
-        #gradient-background {
-            position: relative;
-            z-index: 10;
-            width: 1800px;
-            height: fit-content;
-            padding: 400px;
-            margin: -400px;
-            background: radial-gradient(circle at center, #628699 0, #628699 100%);
-            -webkit-background-clip: text;
-            /* 应用于WebKit浏览器 */
-            background-clip: text;
-            font-size: 38px;
-            font-weight: bold;
-            color: transparent;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div style="height: 100vh;">
+        <div class="rotatetextbox">
+            <div><span>The</span></div>
+            <div><span>fastest</span></div>
+            <div><span>way</span></div>
+            <div><span>to</span></div>
+            <div><span>build</span></div>
+            <div><span>tomorrow's</span></div>
+            <div><span>web</span></div>
+        </div>
     </div>
     <div class="bottomboxborder">
         <div class="bottombox">
             <div id="gradient-background" style=" transition: 1s ease">
-                Payload is the <span>content framework</span> that accelerates how developers, marketers, and product owners
+                Payload is the <span class="whitespan">content framework</span> that accelerates how developers, marketers, and product owners
                 work together.
             </div>
         </div>
     </div>
 
 
-    <script>
-        const bottombox = document.getElementsByClassName('bottombox')[0]
-
-        document.addEventListener('scroll', function () {
-            let rect = bottombox.getBoundingClientRect()
-            let windowHeight = window.innerHeight || document.documentElement.clientHeight
-
-            if (rect.top< windowHeight * 0.5 && rect.bottom > windowHeight * 0.3) {
-                bottombox.classList.add('bottomboxhover')
-            } else {
-                bottombox.classList.remove('bottomboxhover')
-            }
-        })
-
-        var gradientBackground = document.getElementById('gradient-background');
-
-        gradientBackground.addEventListener('mousemove', function (e) {
-            var x = e.clientX; // 获取鼠标位置的X坐标
-            var y = e.clientY; // 获取鼠标位置的Y坐标
-
-            var rect = gradientBackground.getBoundingClientRect();
-
-            var localX = x - rect.left;
-            var localY = y - rect.top;
-
-            var width = gradientBackground.offsetWidth; // 获取元素宽度
-            var height = gradientBackground.offsetHeight; // 获取元素高度
-
-            // 计算鼠标位置占元素的百分比
-            var xPercent = localX / width * 100;
-            var yPercent = localY / height * 100;
-
-            // 更新渐变背景的中心点
-            gradientBackground.style.background = `radial-gradient(circle at ${xPercent}% ${yPercent}%, #dfedf4 0, #628699 20%, #628699 100%)`;
-            gradientBackground.style.webkitBackgroundClip = 'text'; // 对于支持的 WebKit 浏览器
-            gradientBackground.style.backgroundClip = 'text';
-        });
-    </script>
-
+    <script src="./script.js"></script>
 </body>
 
 </html>
