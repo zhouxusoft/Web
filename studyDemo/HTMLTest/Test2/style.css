@@ -73,10 +73,26 @@ body {
     color: #2b4350;
     font-size: 48px;
     font-weight: 600;
-    transform: translateY(100px) rotate(16deg);
-    transition: 0.5s ease;
+    opacity: 0;
+    transition: transform 1s ease;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .rotatetextbox:hover span {
-    transform: translateY(0%) rotate(0deg);
+    transform: translateY(0%) rotate(0deg) !important;
+    animation: fadein 1s;
+    opacity: 1;
 }
