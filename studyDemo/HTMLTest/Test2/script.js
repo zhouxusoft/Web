@@ -41,6 +41,7 @@ for (let i = 0; i < rotatetextboxspans.length; i++) {
     const element = rotatetextboxspans[i]
     let translateYNum = 100 + 20 * i
     let transformTime = 1 + 0.05 * i
-    element.style.transform = `translateY(${translateYNum}%) rotate(16deg)`
+    element.style.transform = `translateY(${translateYNum}%) rotate(16deg) translateZ(0)`
     element.style.transition = `transform ${transformTime}s ease`
+    // element.style.willChange = "transform"
 }

@@ -91,7 +91,7 @@ body {
 }
 
 .rotatetextbox:hover span {
-    transform: translateY(0%) rotate(0deg) !important;
+    transform: translateY(0%) rotate(0deg) translateZ(0) !important;
     animation: fadein 1s;
     opacity: 1;
 }
