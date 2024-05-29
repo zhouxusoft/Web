@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 300vh;
+}
+
+.whitespan {
+    color: #FFFFFF;
+}
+
+.bottomboxborder {
+    position: relative;
+    height: 100vh;
+    background-color: #222222;
+    background-image: url('./image.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bottombox {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+    background-image: url('./noise.png');
+    background-repeat: repeat;
+    background-color: #000000FF;
+    transition: 0.8s ease;
+}
+
+.bottomboxhover {
+    background-color: #00000000;
+    transition: 1.2s ease;
+}
+
+#gradient-background {
+    position: relative;
+    z-index: 10;
+    width: 1800px;
+    height: fit-content;
+    padding: 400px;
+    margin: -400px;
+    background: radial-gradient(circle at center, #628699 0, #628699 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 38px;
+    font-weight: bold;
+    color: transparent;
+}
+
+.rotatetextbox {
+    width: 550px;
+    margin: 60px;
+}
+
+.rotatetextbox div {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 5px;
+}
+
+.rotatetextbox span {
+    display: flex;
+    overflow: hidden;
+    color: #2b4350;
+    font-size: 48px;
+    font-weight: 600;
+    opacity: 0;
+}
+
+@keyframes textfadein {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.runtextfadein span{
+    transform: translateY(0%) rotate(0deg) translateZ(0) !important;
+    animation: textfadein 1s;
+    opacity: 1;
+}
