@@ -14,10 +14,10 @@
 }
 
 .texttitle {
-    margin: 20px 0 10px;
+    margin: 40px 0 10px;
 }
 
-.btn {
+.displaybtn {
     margin: 0 100px;
     background-color: #FFFFFF;
     border: solid 1px #000000;
@@ -25,10 +25,10 @@
     height: 60px;
     width: 200px;
     cursor: pointer;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
-.btn:hover {
+.displaybtn:hover {
     background-color: #222222;
     color: #FFFFFF;
 }
