@@ -24,7 +24,7 @@
     border: solid 1px #000000;
     font-size: 16px;
     height: 60px;
-    width: 200px;
+    width: 240px;
     cursor: pointer;
     overflow: hidden;
 }
@@ -55,7 +55,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 198px;
+    width: 238px;
     height: 60px;
 }
 
@@ -70,9 +70,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 198px;
+    width: 238px;
     height: 60px;
-    background-color: #000000;
+    background-color: #202020;
     color: #FFFFFF;
 }
 
