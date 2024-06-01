@@ -18,6 +18,7 @@
 }
 
 .displaybtn {
+    position: relative;
     margin: 0 100px;
     background-color: #FFFFFF;
     border: solid 1px #000000;
@@ -25,10 +26,59 @@
     height: 60px;
     width: 200px;
     cursor: pointer;
-    transition: 0.3s;
+    overflow: hidden;
 }
 
 .displaybtn:hover {
-    background-color: #222222;
+    border: solid 1px #444444;
+}
+
+.displaybtnbox {
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease;
+}
+
+.displaybtn:hover .displaybtnbox {
+    top: -60px;
+}
+
+.displaybtn:hover .displaybtnwhitetext {
+    transform: rotate(-4deg) translateZ(0);
+}
+
+.displaybtn:hover .displaybtnblacktext {
+    transform: rotate(0deg) translateZ(0);
+}
+
+.displaybtnwhite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 60px;
+}
+
+.displaybtnwhitetext {
+    transition: 0.4s ease;
+    transition-delay: 0.1s;
+    transform-origin: 0% 100%;
+    transform: rotate(0deg) translateZ(0);
+}
+
+.displaybtnblack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 60px;
+    background-color: #000000;
     color: #FFFFFF;
+}
+
+.displaybtnblacktext {
+    transition: 0.4s ease;
+    transition-delay: 0.1s;
+    transform-origin: 0% 0%;
+    transform: rotate(4deg) translateZ(0);
 }
