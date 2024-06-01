@@ -4,12 +4,60 @@
     box-sizing: border-box;
 }
 
+.borderboxcover {
+    position: absolute;
+    height:80vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: bottom;
+}
+
+.pagefadeinout {
+    animation: pagefadeinout 1s ease;
+}
+
+@keyframes pagefadeinout {
+    0% {
+        transform: scale(0) translateZ(0);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0) translateZ(0);
+        opacity: 0;
+    }
+}
+
 .borderbox {
     position: relative;
     height: 100vh;
 }
 
 .textbox {
+    height: 80vh;
+    position: relative;
     padding: 100px;
 }
 
@@ -26,7 +74,12 @@
     height: 60px;
     width: 240px;
     cursor: pointer;
+    user-select: none;
     overflow: hidden;
+}
+
+.zindex-1 {
+    z-index: -1;
 }
 
 .displaybtn:hover {
@@ -44,7 +97,7 @@
 }
 
 .displaybtn:hover .displaybtnwhitetext {
-    transform: rotate(-4deg) translateZ(0);
+    transform: rotate(-5deg) translateZ(0);
 }
 
 .displaybtn:hover .displaybtnblacktext {
@@ -80,5 +133,5 @@
     transition: 0.4s ease;
     transition-delay: 0.1s;
     transform-origin: 0% 0%;
-    transform: rotate(4deg) translateZ(0);
+    transform: rotate(5deg) translateZ(0);
 }
