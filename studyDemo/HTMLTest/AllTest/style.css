@@ -12,6 +12,11 @@ body {
 /**
  * page1 & page2 css
  */
+
+#pageworld {
+    overflow: hidden;
+}
+
 .whitespan {
     color: #FFFFFF;
 }

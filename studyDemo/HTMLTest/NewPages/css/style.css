@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/**
+ * pagehello css
+ */
+
 .logoimg {
     width: 210px;
 }
@@ -111,7 +121,8 @@
 .container {
     position: relative;
     display: flex;
-    justify-content: center;    align-items: center;
+    justify-content: center;
+    align-items: center;
     padding-top: 100px;
     height: 100vh;
     margin-top: -60px;
@@ -348,4 +359,299 @@
 
 .hidden {
     z-index: 5;
+}
+
+/**
+ * page1 & page2 css
+ */
+
+.whitespan {
+    color: #FFFFFF;
+}
+
+.bottomboxborder {
+    position: relative;
+    height: 100vh;
+    background-color: #222222;
+    background-image: url('../static/image.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 80vh;
+}
+
+.bottombox {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    padding: 100px;
+    background-image: url('../static/noise.png');
+    background-repeat: repeat;
+    background-color: #000000FF;
+    transition: 0.8s ease;
+}
+
+.bottomboxhover {
+    background-color: #00000000;
+    transition: 1.2s ease;
+}
+
+#gradient-background {
+    position: relative;
+    width: 1800px;
+    height: fit-content;
+    padding: 400px;
+    margin: -400px;
+    background: radial-gradient(circle at center, #628699 0, #628699 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    font-size: 38px;
+    font-weight: bold;
+    color: transparent;
+}
+
+.rotatetextbox {
+    width: 750px;
+    margin: 60px;
+}
+
+.rotatetextbox div {
+    display: inline-block;
+    overflow: hidden;
+    margin: 0 5px;
+}
+
+.rotatetextbox span {
+    display: flex;
+    overflow: hidden;
+    color: #2b4350;
+    font-size: 48px;
+    font-weight: 600;
+    opacity: 0;
+}
+
+@keyframes textfadein {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.runtextfadein span{
+    transform: translateY(0%) rotate(0deg) translateZ(0) !important;
+    animation: textfadein 1s;
+    opacity: 1;
+}
+
+.displaybtn1 {
+    position: relative;
+    color: #FFFFFF;
+    border: solid 1px #FFFFFF;
+    font-size: 16px;
+    height: 60px;
+    width: 240px;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+    margin-left: 100px;
+}
+
+.displaybtn1:hover {
+    border: solid 1px #444444;
+}
+
+.displaybtnbox1 {
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease;
+}
+
+.displaybtn1:hover .displaybtnbox1 {
+    top: -60px;
+}
+
+.displaybtn1:hover .displaybtnwhitetext1 {
+    transform: rotate(-5deg) translateZ(0);
+}
+
+.displaybtn1:hover .displaybtnblacktext1 {
+    transform: rotate(0deg) translateZ(0);
+}
+
+.displaybtnwhite1 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 238px;
+    height: 60px;
+    padding-left: 40px;
+}
+
+.displaybtnwhitetext1 {
+    transition: 0.4s ease;
+    transition-delay: 0.1s;
+    transform-origin: 0% 100%;
+    transform: rotate(0deg) translateZ(0);
+}
+
+.displaybtnblack1 {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 40px;
+    width: 238px;
+    height: 60px;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.displaybtnblacktext1 {
+    transition: 0.4s ease;
+    transition-delay: 0.1s;
+    transform-origin: 0% 0%;
+    transform: rotate(5deg) translateZ(0);
+    color: #000000;
+    text-decoration: none;
+}
+
+.borderboxcover {
+    position: absolute;
+    height:80vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 1;
+    transform: scale(0);
+    transform-origin: bottom;
+}
+
+.pagefadeinout {
+    animation: pagefadeinout 1s ease;
+}
+
+@keyframes pagefadeinout {
+    0% {
+        transform: scale(0) translateZ(0);
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    60% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(0) translateZ(0);
+        opacity: 0;
+    }
+}
+
+.p3borderbox {
+    position: relative;
+    height: 100vh;
+}
+
+.textbox {
+    height: 80vh;
+    position: relative;
+    padding: 100px;
+}
+
+.texttitle {
+    margin: 40px 0 10px;
+}
+
+.displaybtn {
+    position: relative;
+    margin: 0 100px;
+    background-color: #FFFFFF;
+    border: solid 1px #000000;
+    font-size: 16px;
+    height: 60px;
+    width: 240px;
+    cursor: pointer;
+    user-select: none;
+    overflow: hidden;
+}
+
+.zindex-1 {
+    z-index: -1;
+}
+
+.displaybtn:hover {
+    border: solid 1px #444444;
+}
+
+.displaybtnbox {
+    position: absolute;
+    top: 0;
+    transition: 0.3s ease;
+}
+
+.displaybtn:hover .displaybtnbox {
+    top: -60px;
+}
+
+.displaybtn:hover .displaybtnwhitetext {
+    transform: rotate(-5deg) translateZ(0);
+}
+
+.displaybtn:hover .displaybtnblacktext {
+    transform: rotate(0deg) translateZ(0);
+}
+
+.displaybtnwhite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 238px;
+    height: 60px;
+}
+
+.displaybtnwhitetext {
+    transition: 0.4s ease;
+    transition-delay: 0.1s;
+    transform-origin: 0% 100%;
+    transform: rotate(0deg) translateZ(0);
+}
+
+.displaybtnblack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 238px;
+    height: 60px;
+    background-color: #202020;
+    color: #FFFFFF;
+}
+
+.displaybtnblacktext {
+    transition: 0.4s ease;
+    transition-delay: 0.1s;
+    transform-origin: 0% 0%;
+    transform: rotate(5deg) translateZ(0);
 }
