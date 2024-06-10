@@ -86,7 +86,7 @@
 }
 
 .currentweatherbox {
-    display: flex;
+    display: none;
     margin: 10px auto;
     width: fit-content;
 }
@@ -117,13 +117,13 @@
 }
 
 .currentweatherlist {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
 
 .weatherlistbox {
-    width: 80px;
+    min-width: 80px;
     height: 80px;
     border: 1px solid #000000;
     border-radius: 0.25rem;
