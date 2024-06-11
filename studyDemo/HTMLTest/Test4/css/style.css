@@ -87,7 +87,7 @@
 }
 
 .currentweatherbox {
-    display: none;
+    /* display: none; */
     margin: 0px auto 10px;
     width: fit-content;
 }
@@ -118,7 +118,7 @@
 }
 
 .currentweatherlist {
-    display: none;
+    /* display: none; */
     justify-content: center;
     align-items: center;
 }
@@ -177,7 +177,10 @@
     border-radius: 0.25rem;
     margin: 0px 10px;
     flex: 1;
-    height: 240px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .daysweatherbox {
@@ -211,6 +214,9 @@
     padding: 5px;
     border-radius: 0.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .dayweatherlogo {
@@ -222,13 +228,76 @@
     font-size: 16px;
     font-weight: 600;
     align-items: center;
-    margin: 0px 20px 0px 40px;
+    margin: 0px 15px 0px 40px;
+    color: #444444;
+}
+
+.maxweathernum {
+    width: 27px;
+    text-align: end;
 }
 
 .maxtominline {
     background-image: linear-gradient(to right, #F18360, #427BFF);
     height: 6px;
-    width: 120px;
+    width: 100px;
     margin: 10px;
     border-radius: 3px;
+}
+
+.perhourweatherbox {
+    width: 50px;
+    margin: 2px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.perhourweathertemp {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.perhourweathertempheight {
+    width: 7px;
+    background-color: #3e73ec;
+    height: 80px;
+    border-radius: 3px;
+    margin: 5px auto;
+}
+
+.perhourweathericonbox {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24), 0 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.perhourweathericon {
+    opacity: 0.7;
+}
+
+.perhourweatherdirbox {
+    width: fit-content;
+    margin: 2px auto;
+}
+
+.perhourweatherdir {
+    opacity: 0.8;
+    rotate: 0deg;
+}
+
+.perhourweathertime {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 15px;
+    opacity: 0.8;
 }
