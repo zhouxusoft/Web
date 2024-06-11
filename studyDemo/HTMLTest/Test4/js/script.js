@@ -47,7 +47,7 @@ $(".gologobox").eq(0).click(function () {
                             url: `https://devapi.qweather.com/v7/weather/now?location=${citycode}&key=c009167ad03e4cd781a7a3e5dd8e3357`,
                             method: 'GET',
                             success: function (data) {
-                                console.log(data)
+                                // console.log(data)
                                 if (data.code == 200) {
                                     cityweatherinfo = data.now
                                     updateWeatherInfoBox()
@@ -62,7 +62,7 @@ $(".gologobox").eq(0).click(function () {
                             url: `https://devapi.qweather.com/v7/weather/7d?location=${citycode}&key=c009167ad03e4cd781a7a3e5dd8e3357`,
                             method: 'GET',
                             success: function (data) {
-                                console.log(data)
+                                // console.log(data)
                                 if (data.code == 200) {
                                     sevendayweatherinfo = data.daily
                                     updateSevenDayWeather()
@@ -77,7 +77,7 @@ $(".gologobox").eq(0).click(function () {
                             url: `https://devapi.qweather.com/v7/weather/24h?location=${citycode}&key=c009167ad03e4cd781a7a3e5dd8e3357`,
                             method: 'GET',
                             success: function (data) {
-                                console.log(data)
+                                // console.log(data)
                                 if (data.code == 200) {
                                     perhourweatherinfo = data.hourly
                                     updatePerHourWeather()
