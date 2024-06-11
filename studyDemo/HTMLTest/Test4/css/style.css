@@ -82,12 +82,11 @@
     border: 1px solid #000000;
     border-radius: 0.25rem;
     margin: 10px;
-    min-height: 266px;
+    height: 266px;
     padding: 2px;
 }
 
 .currentweatherbox {
-    /* display: none; */
     margin: 0px auto 10px;
     width: fit-content;
 }
@@ -118,7 +117,6 @@
 }
 
 .currentweatherlist {
-    /* display: none; */
     justify-content: center;
     align-items: center;
 }
@@ -178,6 +176,9 @@
     margin: 0px 10px;
     flex: 1;
     height: 250px;
+}
+
+.hourweatherboxborder {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -300,4 +301,8 @@
     margin: 0 auto;
     font-size: 15px;
     opacity: 0.8;
+}
+
+.displaynone {
+    opacity: 0;
 }

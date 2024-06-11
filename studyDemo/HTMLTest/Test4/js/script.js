@@ -120,6 +120,9 @@ function updateWeatherInfoBox() {
     placetext.text(`${cityname}`)
     $('.currentweatherbox').css('display', 'flex')
     $('.currentweatherlist').css('display', 'flex')
+    showDisplay(0)
+    showDisplay(1)
+    showDisplay(2)
 }
 
 function updateSevenDayWeather() {
@@ -143,6 +146,7 @@ function updateSevenDayWeather() {
         maxweathernum.eq(i).text(`${sevendayweatherinfo[i].tempMax}°`)
         minweathernum.eq(i).text(`${sevendayweatherinfo[i].tempMin}°`)
     }
+    showDisplay(3)
 }
 
 function updatePerHourWeather() {
@@ -172,4 +176,9 @@ function updatePerHourWeather() {
         perhourweatherdir.eq(i).css('rotate', `${perhourweatherinfo[2 * i].wind360}deg`)
         perhourweathertime.eq(i).text(`${perhourweatherinfo[2 * i].fxTime.substring(11, 16)}`)
     }
+    showDisplay(4)
+}
+
+function showDisplay(num) {
+    $(".displaynone").eq(num).css('opacity', 1)
 }
