@@ -26,6 +26,7 @@
     border: 1px solid #000000;
     border-radius: 0.25rem;
     height: 70vh;
+    min-height: 500px;
 }
 
 .searchbox {
@@ -39,7 +40,7 @@
 
 #searchcity {
     border: none;
-    height: 32px;
+    height: 36px;
     width: 220px;
     font-size: 16px;
 }
@@ -52,9 +53,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 28px;
-    width: 28px;
-    margin: 2px;
+    height: 30px;
+    width: 30px;
+    margin: 3px;
     border-radius: 0.25rem;
 }
 
@@ -62,9 +63,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 28px;
-    width: 28px;
-    margin: 2px;
+    height: 30px;
+    width: 30px;
+    margin: 3px;
     border-radius: 0.25rem;
 }
 
@@ -81,13 +82,13 @@
     border: 1px solid #000000;
     border-radius: 0.25rem;
     margin: 10px;
-    min-height: 240px;
+    min-height: 266px;
     padding: 2px;
 }
 
 .currentweatherbox {
     display: none;
-    margin: 10px auto;
+    margin: 0px auto 10px;
     width: fit-content;
 }
 
@@ -141,4 +142,48 @@
     color: #000000BB;
     white-space: nowrap;
     margin-top: 6px;
+}
+
+.placeandtime {
+    margin: 10px 0px 0px 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.placetext {
+    margin: 0px 4px;
+    display: flex;
+    align-items: center;
+}
+
+.weatherinfoboxtop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.placeandtimetime {
+    font-size: 18px;
+    margin: 10px 10px 0px 0px;
+}
+
+.moresweatherbox {
+    display: flex;
+}
+
+.hourweatherbox {
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 0px 10px;
+    flex: 1;
+    height: 240px;
+}
+
+.daysweatherbox {
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 0px 10px 0px 0px;
+    flex: 1;
+    height: 240px;
 }
