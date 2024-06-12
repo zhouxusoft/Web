@@ -90,6 +90,8 @@ $(".gologobox").eq(0).click(function () {
                                     cityweatherinfo = data.now
                                     // 更新页面城市实时天气显示
                                     updateWeatherInfoBox()
+                                } else {
+                                    alert('查询失败，接口错误')
                                 }
                             },
                             error: function () {
@@ -137,6 +139,8 @@ $(".gologobox").eq(0).click(function () {
                     } else {
                         alert('未查询到城市')
                     }
+                } else {
+                    alert('查询地区失败')
                 }
             },
             error: function () {
