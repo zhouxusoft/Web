@@ -233,13 +233,13 @@ function updatePerHourWeather() {
     // 默认温度条高度显示为20px
     let tempheight = [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
 
-    // 计算每小时的温度条高度
+    // 计算每小时的温度条高度，规则：最低20px,最高80px,当前时的高度等于（当前时的温度和最低温度的温差）除以（当天的最大温差）乘以 60 + 20
     for (let i = 0; i < 12; i++) {
         tempheight[i] = 20 + 60 * (perhourweatherinfo[2 * i].temp - mintemp) / (maxtemp - mintemp)
         tempheight[i] = Math.floor(tempheight[i])
     }
     // console.log(tempheight)
-    
+
     // 循环更新每小时的温度信息
     for (let i = 0; i < 12; i++) {
         perhourweathertemp.eq(i).text(`${perhourweatherinfo[2 * i].temp}°`)
@@ -253,6 +253,26 @@ function updatePerHourWeather() {
     showDisplay(4)
 }
 
+function updateHitokoto() {
+    $.ajax({
+        url: 'https://v1.hitokoto.cn/',
+        type: 'POST',
+        success: function (resData) {
+            let datamsg = resData.hitokoto
+            let datafrom = '—— 「 ' + resData.from + ' 」'
+            console.log(datamsg)
+            console.log(datafrom)
+        },
+        error: function (xhr, status, error) {
+            console.error("请求失败")
+        }
+    })
+}
+
+
+
+
+// 修改每一区块的可见性
 function showDisplay(num) {
     $(".displaynone").eq(num).css('opacity', 1)
 }
