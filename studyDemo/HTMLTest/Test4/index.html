@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>天气查询服务</title>
     <!-- 百度 jQuery CDN -->
-    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <!-- 本地 jQuery -->
+     <script src="./js/jquery.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -14,6 +16,7 @@
     <div class="borderbox">
         <div class="topbox">全国天气查询服务</div>
         <div class="mainbox">
+            <!-- 搜索框 -->
             <div class="searchbox">
                 <div class="searchlogobox"><img src="./static/search.png" alt="" srcset="" width="18px"></div>
                 <input type="text" name="" id="searchcity" autocomplete="off" placeholder="输入城市名称查询">
@@ -21,6 +24,7 @@
             </div>
             <div class="hr"></div>
             <div class="weatherinfobox">
+                <!-- 定位和时间 -->
                 <div class="weatherinfoboxtop displaynone">
                     <div class="placeandtime">
                         <img src="./static/location.png" alt="" srcset="" width="18px">
@@ -28,6 +32,7 @@
                     </div>
                     <div class="placeandtimetime">2024/6/11 23:38:24</div>
                 </div>
+                <!-- 当前温度天气显示 -->
                 <div class="currentweatherbox displaynone">
                     <div class="currentweathericon">
                         <img class="weathericon" src="./static/icons/1250.svg" alt="" srcset="" width="60px">
@@ -37,6 +42,7 @@
                         <div class="currentweathertext">天晴</div>
                     </div>
                 </div>
+                <!-- 当前天气各类详细信息 -->
                 <div class="currentweatherlist displaynone">
                     <div class="weatherlistbox">
                         <div class="weatherlistnum windScaleinfo">1级</div>
@@ -65,6 +71,7 @@
                 </div>
             </div>
             <div class="moresweatherbox">
+                <!-- 24小时天气显示 -->
                 <div class="hourweatherbox">
                     <div class="hourweatherboxborder displaynone">
                         <div class="perhourweatherbox">
@@ -225,6 +232,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- 一周天气显示 -->
                 <div class="daysweatherbox">
                     <div class="daysweatherboxborder displaynone">
                         <div class="dayweather onedayweather">
@@ -330,7 +338,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="./js/script.js"></script>
 </body>
