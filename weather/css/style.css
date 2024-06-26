@@ -6,6 +6,8 @@
 
 .borderbox {
     width: 100%;
+    min-width: 1240px;
+    padding: 20px;
 }
 
 .topbox {
