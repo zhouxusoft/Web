@@ -168,6 +168,7 @@
 
 .moresweatherbox {
     display: flex;
+    position: relative;
 }
 
 .hourweatherbox {
@@ -305,4 +306,32 @@
 
 .displaynone {
     opacity: 0;
+}
+
+.hitokoto {
+    width: 778px;
+    height: 140px;
+    /* border: 1px double #000000; */
+    position: absolute;
+    top: 260px;
+    border-radius: 0.25rem;
+}
+
+.hitokotoborder {
+    width: fit-content;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hitokotomsg {
+    padding-right: 20px;
+    margin-bottom: 5px;
+}
+
+.hitokotofrom {
+    text-align: end;
 }

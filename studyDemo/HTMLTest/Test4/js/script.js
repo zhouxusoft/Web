@@ -65,6 +65,8 @@ $(".gologobox").eq(0).click(function () {
     if (searchkey.trim() === '') {
         alert('输入不能为空！')
     } else {
+        // 更新hitokoto
+        updateHitokoto()
         // 进行查询时清空查询框内容
         $('#searchcity').val('')
         // 发送查询请求，先获取用户查询城市的天气代码
@@ -257,6 +259,9 @@ function updatePerHourWeather() {
     showDisplay(4)
 }
 
+const hitokotomsg = $('.hitokotomsg').eq(0)
+const hitokotofrom = $('.hitokotofrom').eq(0)
+
 function updateHitokoto() {
     $.ajax({
         url: 'https://v1.hitokoto.cn/',
@@ -266,6 +271,9 @@ function updateHitokoto() {
             let datafrom = '—— 「 ' + resData.from + ' 」'
             console.log(datamsg)
             console.log(datafrom)
+
+            hitokotomsg.text(datamsg)
+            hitokotofrom.text(datafrom)
         },
         error: function (xhr, status, error) {
             console.error("请求失败")
