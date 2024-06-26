@@ -14,15 +14,17 @@
     padding: 40px;
     border: 1px solid #000000;
     border-radius: 0.25rem;
-    width: 85vw;
-    max-width: 1200px;
+    /* width: 85vw;
+    max-width: 1200px; */
+    width: 1200px;
     text-align: center
 }
 
 .mainbox {
     margin: 0 auto 10px;
-    width: 85vw;
-    max-width: 1200px;
+    /* width: 85vw;
+    max-width: 1200px; */
+    width: 1200px;
     border: 1px solid #000000;
     border-radius: 0.25rem;
     height: fit-content;
