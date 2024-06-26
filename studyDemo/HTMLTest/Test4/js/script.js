@@ -269,8 +269,8 @@ function updateHitokoto() {
         success: function (resData) {
             let datamsg = resData.hitokoto
             let datafrom = '—— 「 ' + resData.from + ' 」'
-            console.log(datamsg)
-            console.log(datafrom)
+            // console.log(datamsg)
+            // console.log(datafrom)
 
             hitokotomsg.text(datamsg)
             hitokotofrom.text(datafrom)

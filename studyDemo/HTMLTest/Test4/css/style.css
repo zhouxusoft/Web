@@ -311,7 +311,7 @@
 .hitokoto {
     width: 778px;
     height: 140px;
-    /* border: 1px double #000000; */
+    border: 1px dashed #000000;
     position: absolute;
     top: 260px;
     border-radius: 0.25rem;
@@ -329,7 +329,7 @@
 
 .hitokotomsg {
     padding-right: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .hitokotofrom {
