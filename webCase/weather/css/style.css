@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.borderbox {
+    width: 100%;
+}
+
+.topbox {
+    margin: 40px auto 15px;
+    font-size: 32px;
+    padding: 40px;
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    width: 85vw;
+    max-width: 1200px;
+    text-align: center
+}
+
+.mainbox {
+    margin: 0 auto 10px;
+    width: 85vw;
+    max-width: 1200px;
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    height: fit-content;
+    min-height: 756px;
+}
+
+.searchbox {
+    display: flex;
+    justify-content: space-between;
+    width: 280px;
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 10px;
+}
+
+#searchcity {
+    border: none;
+    height: 36px;
+    width: 220px;
+    font-size: 16px;
+}
+
+#searchcity:focus {
+    outline: none;
+}
+
+.searchlogobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    border-radius: 0.25rem;
+}
+
+.gologobox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    border-radius: 0.25rem;
+}
+
+.gologobox:hover {
+    background-color: #e7ecf0;
+}
+
+.hr {
+    border-top: 1px solid #000000;
+    margin: 10px 10px;
+}
+
+.weatherinfobox {
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 10px;
+    height: 266px;
+    padding: 2px;
+}
+
+.currentweatherbox {
+    margin: 0px auto 10px;
+    width: fit-content;
+}
+
+.currentweathericon {
+    padding: 10px;
+    background-color: #FFF;
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.14);
+    margin: 10px;
+}
+
+.weathericon {
+    opacity: 0.7;
+}
+
+.currentweatherinfo {
+    margin: 10px;
+}
+
+.currentweathernum {
+    font-size: 30px;
+}
+
+.currentweathertext {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.currentweatherlist {
+    justify-content: center;
+    align-items: center;
+}
+
+.weatherlistbox {
+    min-width: 80px;
+    height: 80px;
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 15px 12px;
+    padding: 12px 5px;
+}
+
+.weatherlistnum {
+    font-size: 18px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.weatherlisttext {
+    color: #000000BB;
+    white-space: nowrap;
+    margin-top: 6px;
+}
+
+.placeandtime {
+    margin: 10px 0px 0px 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+
+.placetext {
+    margin: 0px 4px;
+    display: flex;
+    align-items: center;
+}
+
+.weatherinfoboxtop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.placeandtimetime {
+    font-size: 18px;
+    margin: 10px 10px 0px 0px;
+}
+
+.moresweatherbox {
+    display: flex;
+    position: relative;
+}
+
+.hourweatherbox {
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 0px 10px;
+    flex: 1;
+    height: 250px;
+}
+
+.hourweatherboxborder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daysweatherbox {
+    border: 1px solid #000000;
+    border-radius: 0.25rem;
+    margin: 0px 10px 0px 0px;
+    height: fit-content;
+}
+
+.dayweather {
+    margin: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.dayweatherday {
+    width: 100px;
+}
+
+.dayweatherdayxinqi {
+    font-weight: 600;
+    font-size: 17px;
+    color: #444444;
+}
+
+.dayweatherdayriqi {
+    color: #555555;
+}
+
+.dayweatherlogobox {
+    padding: 5px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dayweatherlogo {
+    opacity: 0.7;
+}
+
+.maxminweatherbox {
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    align-items: center;
+    margin: 0px 15px 0px 40px;
+    color: #444444;
+}
+
+.maxweathernum {
+    width: 27px;
+    text-align: end;
+}
+
+.maxtominline {
+    background-image: linear-gradient(to right, #F18360, #427BFF);
+    height: 6px;
+    width: 100px;
+    margin: 10px;
+    border-radius: 3px;
+}
+
+.perhourweatherbox {
+    width: 50px;
+    margin: 2px;
+    height: 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.perhourweathertemp {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333333;
+}
+
+.perhourweathertempheight {
+    width: 7px;
+    background-color: #3e73ec;
+    height: 80px;
+    border-radius: 3px;
+    margin: 5px auto;
+}
+
+.perhourweathericonbox {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto 10px;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.24), 0 1px 3px rgba(0, 0, 0, 0.16);
+}
+
+.perhourweathericon {
+    opacity: 0.7;
+}
+
+.perhourweatherdirbox {
+    width: fit-content;
+    margin: 2px auto;
+}
+
+.perhourweatherdir {
+    opacity: 0.8;
+    rotate: 0deg;
+}
+
+.perhourweathertime {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 15px;
+    opacity: 0.8;
+}
+
+.displaynone {
+    opacity: 0;
+}
+
+.hitokoto {
+    width: 778px;
+    height: 140px;
+    border: 1px dashed #000000;
+    position: absolute;
+    top: 260px;
+    border-radius: 0.25rem;
+}
+
+.hitokotoborder {
+    width: fit-content;
+    max-width: 500px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.hitokotomsg {
+    padding-right: 20px;
+    margin-bottom: 10px;
+}
+
+.hitokotofrom {
+    text-align: end;
+}

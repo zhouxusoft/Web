@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godxu天气查询服务</title>
+    <!-- 百度 jQuery CDN -->
+    <!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    <!-- 本地 jQuery -->
+     <script src="./js/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="borderbox">
+        <div class="topbox">Godxu天气查询服务</div>
+        <div class="mainbox">
+            <!-- 搜索框 -->
+            <div class="searchbox">
+                <div class="searchlogobox"><img src="./static/search.png" alt="" srcset="" width="18px"></div>
+                <input type="text" name="" id="searchcity" autocomplete="off" placeholder="输入城市名称查询">
+                <div class="gologobox"><img src="./static/go.png" alt="" srcset="" width="20px"></div>
+            </div>
+            <div class="hr"></div>
+            <div class="weatherinfobox">
+                <!-- 定位和时间 -->
+                <div class="weatherinfoboxtop displaynone">
+                    <div class="placeandtime">
+                        <img src="./static/location.png" alt="" srcset="" width="18px">
+                        <span class="placetext">南昌</span>
+                    </div>
+                    <div class="placeandtimetime">2024/6/11 23:38:24</div>
+                </div>
+                <!-- 当前温度天气显示 -->
+                <div class="currentweatherbox displaynone">
+                    <div class="currentweathericon">
+                        <img class="weathericon" src="./static/icons/1250.svg" alt="" srcset="" width="60px">
+                    </div>
+                    <div class="currentweatherinfo">
+                        <div class="currentweathernum">32°</div>
+                        <div class="currentweathertext">天晴</div>
+                    </div>
+                </div>
+                <!-- 当前天气各类详细信息 -->
+                <div class="currentweatherlist displaynone">
+                    <div class="weatherlistbox">
+                        <div class="weatherlistnum windScaleinfo">1级</div>
+                        <div class="weatherlisttext windDirinfo">东南风</div>
+                    </div>
+                    <div class="weatherlistbox">
+                        <div class="weatherlistnum humidityinfo">68%</div>
+                        <div class="weatherlisttext">相对湿度</div>
+                    </div>
+                    <div class="weatherlistbox">
+                        <div class="weatherlistnum feelsLikeinfo">23°</div>
+                        <div class="weatherlisttext">体感温度</div>
+                    </div>
+                    <div class="weatherlistbox">
+                        <div class="weatherlistnum visinfo">26km</div>
+                        <div class="weatherlisttext">能见度</div>
+                    </div>
+                    <div class="weatherlistbox">
+                        <div class="weatherlistnum precipinfo">0.0mm</div>
+                        <div class="weatherlisttext">降水量</div>
+                    </div>
+                    <div class="weatherlistbox">
+                        <div class="weatherlistnum pressureinfo">1996hPa</div>
+                        <div class="weatherlisttext">大气压</div>
+                    </div>
+                </div>
+            </div>
+            <div class="moresweatherbox">
+                <!-- 24小时天气显示 -->
+                <div class="hourweatherbox">
+                    <div class="hourweatherboxborder displaynone">
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                05:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                07:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                09:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                11:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                13:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                15:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                17:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                19:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                21:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                23:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                01:00
+                            </div>
+                        </div>
+                        <div class="perhourweatherbox">
+                            <div class="perhourweathertemp">24°</div>
+                            <div class="perhourweathertempheight"></div>
+                            <div class="perhourweathericonbox">
+                                <img class="perhourweathericon" src="./static/icons/151.svg" alt="" srcset="" width="22px">
+                            </div>
+                            <div class="perhourweatherdirbox">
+                                <img class="perhourweatherdir" src="./static/direction.png" alt="" srcset="" width="18px">
+                            </div>
+                            <div class="perhourweathertime">
+                                03:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hitokoto">
+                        <div class="hitokotoborder">
+                            <div class="hitokotomsg">
+                                用代码表达言语的魅力，用代码书写山河的壮丽。
+                            </div>
+                            <div class="hitokotofrom">
+                                ——「 开发者中心 」
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 一周天气显示 -->
+                <div class="daysweatherbox">
+                    <div class="daysweatherboxborder displaynone">
+                        <div class="dayweather onedayweather">
+                            <div class="dayweatherday onedayweatherday">
+                                <div class="dayweatherdayxinqi onedayweatherdayxinqi">今天</div>
+                                <div class="dayweatherdayriqi onedayweatherdayriqi">6月12日</div>
+                            </div>
+                            <div class="dayweatherlogobox">
+                                <img class="dayweatherlogo onedayweatherlogo" src="./static/icons/151.svg" alt="" srcset="" width="26px">
+                            </div>
+                            <div class="maxminweatherbox">
+                                <div class="maxweathernum onemaxweathernum">38°</div>
+                                <div class="maxtominline"></div>
+                                <div class="minweathernum oneminweathernum">24°</div>
+                            </div>
+                        </div>
+                        <div class="dayweather towdayweather">
+                            <div class="dayweatherday twodayweatherday">
+                                <div class="dayweatherdayxinqi twodayweatherdayxinqi">周四</div>
+                                <div class="dayweatherdayriqi twodayweatherdayriqi">6月13日</div>
+                            </div>
+                            <div class="dayweatherlogobox">
+                                <img class="dayweatherlogo twodayweatherlogo" src="./static/icons/151.svg" alt="" srcset="" width="26px">
+                            </div>
+                            <div class="maxminweatherbox">
+                                <div class="maxweathernum twomaxweathernum">38°</div>
+                                <div class="maxtominline"></div>
+                                <div class="minweathernum twominweathernum">24°</div>
+                            </div>
+                        </div>
+                        <div class="dayweather threedayweather">
+                            <div class="dayweatherday threedayweatherday">
+                                <div class="dayweatherdayxinqi threedayweatherdayxinqi">周五</div>
+                                <div class="dayweatherdayriqi threedayweatherdayriqi">6月14日</div>
+                            </div>
+                            <div class="dayweatherlogobox">
+                                <img class="dayweatherlogo threedayweatherlogo" src="./static/icons/151.svg" alt="" srcset="" width="26px">
+                            </div>
+                            <div class="maxminweatherbox">
+                                <div class="maxweathernum threemaxweathernum">38°</div>
+                                <div class="maxtominline"></div>
+                                <div class="minweathernum threeminweathernum">24°</div>
+                            </div>
+                        </div>
+                        <div class="dayweather fourdayweather">
+                            <div class="dayweatherday fourdayweatherday">
+                                <div class="dayweatherdayxinqi fourdayweatherdayxinqi">周六</div>
+                                <div class="dayweatherdayriqi fourdayweatherdayriqi">6月15日</div>
+                            </div>
+                            <div class="dayweatherlogobox">
+                                <img class="dayweatherlogo fourdayweatherlogo" src="./static/icons/151.svg" alt="" srcset="" width="26px">
+                            </div>
+                            <div class="maxminweatherbox">
+                                <div class="maxweathernum fourmaxweathernum">38°</div>
+                                <div class="maxtominline"></div>
+                                <div class="minweathernum fourminweathernum">24°</div>
+                            </div>
+                        </div>
+                        <div class="dayweather fivedayweather">
+                            <div class="dayweatherday fivedayweatherday">
+                                <div class="dayweatherdayxinqi fivedayweatherdayxinqi">周日</div>
+                                <div class="dayweatherdayriqi fivedayweatherdayriqi">6月16日</div>
+                            </div>
+                            <div class="dayweatherlogobox">
+                                <img class="dayweatherlogo fivedayweatherlogo" src="./static/icons/151.svg" alt="" srcset="" width="26px">
+                            </div>
+                            <div class="maxminweatherbox">
+                                <div class="maxweathernum fivemaxweathernum">38°</div>
+                                <div class="maxtominline"></div>
+                                <div class="minweathernum fiveminweathernum">24°</div>
+                            </div>
+                        </div>
+                        <div class="dayweather sixdayweather">
+                            <div class="dayweatherday sixdayweatherday">
+                                <div class="dayweatherdayxinqi sixdayweatherdayxinqi">周一</div>
+                                <div class="dayweatherdayriqi sixdayweatherdayriqi">6月17日</div>
+                            </div>
+                            <div class="dayweatherlogobox">
+                                <img class="dayweatherlogo sixdayweatherlogo" src="./static/icons/151.svg" alt="" srcset="" width="26px">
+                            </div>
+                            <div class="maxminweatherbox">
+                                <div class="maxweathernum sixmaxweathernum">38°</div>
+                                <div class="maxtominline"></div>
+                                <div class="minweathernum sixminweathernum">4°</div>
+                            </div>
+                        </div>
+                        <div class="dayweather sevendayweather">
+                            <div class="dayweatherday sevendayweatherday">
+                                <div class="dayweatherdayxinqi sevendayweatherdayxinqi">周一</div>
+                                <div class="dayweatherdayriqi sevendayweatherdayriqi">6月17日</div>
+                            </div>
+                            <div class="dayweatherlogobox">
+                                <img class="dayweatherlogo sevendayweatherlogo" src="./static/icons/151.svg" alt="" srcset="" width="26px">
+                            </div>
+                            <div class="maxminweatherbox">
+                                <div class="maxweathernum sevenmaxweathernum">8°</div>
+                                <div class="maxtominline"></div>
+                                <div class="minweathernum sevenminweathernum">24°</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
