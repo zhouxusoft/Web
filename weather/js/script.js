@@ -241,8 +241,13 @@ function updatePerHourWeather() {
 
     // 计算每小时的温度条高度，规则：最低20px,最高80px,当前时的高度等于（当前时的温度和最低温度的温差）除以（当天的最大温差）乘以 60 + 20
     for (let i = 0; i < 12; i++) {
-        tempheight[i] = 20 + 60 * (perhourweatherinfo[2 * i].temp - mintemp) / (maxtemp - mintemp)
-        tempheight[i] = Math.floor(tempheight[i])
+        // 当最高温和最低温相同时，所有温度条都显示为50px（中间值）
+        if (maxtemp === mintemp) {
+            tempheight[i] = 50
+        } else {
+            tempheight[i] = 20 + 60 * (perhourweatherinfo[2 * i].temp - mintemp) / (maxtemp - mintemp)
+            tempheight[i] = Math.floor(tempheight[i])
+        }
     }
     // console.log(tempheight)
 
