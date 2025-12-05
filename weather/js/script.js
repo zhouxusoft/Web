@@ -228,17 +228,17 @@ function updatePerHourWeather() {
     let maxtemp = -99
     // 获取一天中的最高温和最低温，用于温度条高度显示的计算
     for (let i = 0; i < 24; i = i + 2) {
-        if (perhourweatherinfo[i].temp > maxtemp) {
+        if (Number(perhourweatherinfo[i].temp) > maxtemp) {
             maxtemp = perhourweatherinfo[i].temp
         }
-        if (perhourweatherinfo[i].temp < mintemp) {
+        if (Number(perhourweatherinfo[i].temp) < mintemp) {
             mintemp = perhourweatherinfo[i].temp
         }
     }
 
     // 默认温度条高度显示为20px
     let tempheight = [20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20, 20]
-
+    
     // 计算每小时的温度条高度，规则：最低20px,最高80px,当前时的高度等于（当前时的温度和最低温度的温差）除以（当天的最大温差）乘以 60 + 20
     for (let i = 0; i < 12; i++) {
         // 当最高温和最低温相同时，所有温度条都显示为50px（中间值）
@@ -249,7 +249,6 @@ function updatePerHourWeather() {
             tempheight[i] = Math.floor(tempheight[i])
         }
     }
-    // console.log(tempheight)
 
     // 循环更新每小时的温度信息
     for (let i = 0; i < 12; i++) {
